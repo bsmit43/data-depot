@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Data Depot - Professional website">
+    <meta name="generator" content="Website Generator">
+    <meta name="theme-color" content="hsl(197, 70%, 40%)">
+    <title>Data Depot</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body{font-family:'Manrope', system-ui, sans-serif;overflow-x:hidden;width:100%;max-width:100%;margin:0;padding:0}
+        h1,h2,h3,h4,h5,h6{font-family:'Manrope', sans-serif}
+        section,header,footer{width:100vw;max-width:100%;overflow-x:hidden}
+        header{background-size:cover;background-position:center;background-repeat:no-repeat;position:relative}
+        [data-animate]{opacity:0;transform:scale(.94);transition:opacity .6s ease-out,transform .6s cubic-bezier(.175,.885,.32,1.275)}[data-animate].visible{opacity:1;transform:scale(1)}
+        .nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);box-shadow:0 1px 3px rgba(0,0,0,.1);transition:all .3s ease;width:100%}
+        ::-webkit-scrollbar{width:8px;height:8px}
+        ::-webkit-scrollbar-track{background:#f1f1f1}
+        ::-webkit-scrollbar-thumb{background:hsl(197, 70%, 40%);border-radius:4px}
+        ::-webkit-scrollbar-thumb:hover{background:hsl(197, 70%, 30%)}
+        body::before{content:'';position:fixed;top:0;left:0;right:0;height:3px;background:hsl(197, 70%, 40%);transform:scaleX(calc(var(--scroll-progress,0%)/100));transform-origin:left;z-index:1000}
+        @media print{[data-animate]{opacity:1;transform:none}}
+    </style>
+    
+    <script>
+        tailwind.config={theme:{extend:{colors:{primary:{"50":"hsl(197, 70%, 95%)","100":"hsl(197, 70%, 90%)","200":"hsl(197, 70%, 80%)","300":"hsl(197, 70%, 70%)","400":"hsl(197, 70%, 60%)","500":"hsl(197, 70%, 50%)","600":"hsl(197, 70%, 40%)","700":"hsl(197, 70%, 30%)","800":"hsl(197, 70%, 20%)","900":"hsl(197, 70%, 10%)"}},fontFamily:{sans:[''Manrope'','system-ui','sans-serif'],heading:[''Manrope'','sans-serif']}}}}
+    </script>
+</head>
+<body class="antialiased text-gray-800">
+    <main>
+        
+<!-- NAV SECTION -->
+
+
+<!-- HEADER SECTION -->
+<header class="relative bg-gray-900 overflow-hidden">
+    <div class="absolute inset-0">
+        <img src="https://pixabay.com/get/g3a360657531b662148a82b82396e81682939c024196b0c011602bcb23d76b107031cdd6a9f94eec9118898ffd1e16cc29a523caa19fba52557d7f799fe5fe4c2_640.jpg" alt="Data Analysis Visualization" class="w-full h-full object-cover opacity-50">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-orange-600 opacity-75"></div>
+    </div>
+
+    <nav class="relative px-6 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a class="text-xl font-bold text-white" href="/">
+                Data Depot
+            </a>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a class="text-white hover:text-gray-200 transition-colors duration-200" href="#">Solutions</a>
+                <a class="text-white hover:text-gray-200 transition-colors duration-200" href="#">Services</a>
+                <a class="text-white hover:text-gray-200 transition-colors duration-200" href="#">About Us</a>
+                <a class="text-white hover:text-gray-200 transition-colors duration-200" href="#">Contact</a>
+                <a class="inline-block py-2 px-4 text-blue-900 bg-white hover:bg-gray-100 rounded-lg transition-colors duration-200 font-semibold" href="#">Get Started</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none focus:ring-2 focus:ring-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-blue-900 shadow-md rounded-b-lg py-4">
+                <a href="#" class="block px-6 py-2 text-white hover:bg-blue-800 transition-colors duration-200">Solutions</a>
+                <a href="#" class="block px-6 py-2 text-white hover:bg-blue-800 transition-colors duration-200">Services</a>
+                <a href="#" class="block px-6 py-2 text-white hover:bg-blue-800 transition-colors duration-200">About Us</a>
+                <a href="#" class="block px-6 py-2 text-white hover:bg-blue-800 transition-colors duration-200">Contact</a>
+                <a href="#" class="block px-6 py-2 text-blue-900 bg-white hover:bg-gray-100 rounded-lg transition-colors duration-200 font-semibold mx-4">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative container mx-auto py-24 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6" data-animate="fade-in-down">
+            Unlock the Power of Your Data
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8" data-animate="fade-in">
+            Transform raw data into actionable insights with our cutting-edge big data analytics solutions.
+        </p>
+        <a href="#" class="inline-block py-3 px-8 text-xl text-blue-900 bg-orange-400 hover:bg-orange-500 rounded-lg transition-colors duration-200 font-semibold" data-animate="fade-in-up">
+            Request a Demo
+        </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</header>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="bg-gray-50 py-16 overflow-hidden">
+    <div class="container mx-auto px-4">
+        <div class="lg:flex lg:items-center lg:justify-between">
+            <div class="lg:w-1/2" data-animate="fade-right">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    About Data Depot: Unlocking the Power of Your Data
+                </h2>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    At Data Depot, we're passionate about transforming raw data into actionable insights. We empower businesses of all sizes to make smarter decisions, optimize operations, and gain a competitive edge through the power of big data analytics. Our team of experienced data scientists, engineers, and consultants are dedicated to providing tailored solutions that meet your unique business needs.
+                </p>
+                <p class="mt-4 text-gray-600 leading-relaxed">
+                    We go beyond simply collecting and processing data. We delve deep to uncover hidden patterns, predict future trends, and provide you with the knowledge you need to thrive in today's data-driven world. From data warehousing and ETL processes to advanced machine learning models and interactive dashboards, we offer a comprehensive suite of services to help you unlock the full potential of your data.
+                </p>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-gray-800">Our Core Values</h3>
+                    <ul class="list-disc list-inside mt-2 text-gray-600">
+                        <li><strong>Innovation:</strong> We constantly explore new technologies and methodologies to deliver cutting-edge solutions.</li>
+                        <li><strong>Integrity:</strong> We operate with the highest ethical standards and prioritize the security and privacy of your data.</li>
+                        <li><strong>Collaboration:</strong> We work closely with our clients to understand their challenges and develop customized solutions.</li>
+                        <li><strong>Results-Oriented:</strong> We are committed to delivering measurable results that drive business value.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 lg:mt-0 lg:w-1/2" data-animate="fade-left">
+                <img src="https://pixabay.com/get/g6ce8d8c6a5191fc914c669fbf325e4c0dc4ee47c39e2703d179d4e0516eba6bd7c7a768616bba36a974ed4629846258a_640.jpg" alt="Data Visualization" class="rounded-xl shadow-lg object-cover w-full h-96">
+            </div>
+        </div>
+
+        <div class="mt-16">
+            <h3 class="text-2xl font-semibold text-gray-800 text-center mb-8">Why Choose Data Depot?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Expertise</h4>
+                    </div>
+                    <p class="text-gray-600">Our team comprises seasoned data scientists, engineers, and consultants with a proven track record of success.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up" data-animate-delay="100">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 2v-2m3 2h-10a1 1 0 00-1 1v3a1 1 0 001 1h10a1 1 0 001-1v-3a1 1 0 00-1-1z"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Custom Solutions</h4>
+                    </div>
+                    <p class="text-gray-600">We tailor our solutions to your specific business challenges and objectives, ensuring maximum impact.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 4.75 7.5 4.75a2.25 2.25 0 00-2.25 2.25c0 1.278.857 2.366 2.25 2.948v.281l2.25-.281v.177c0 1.587.875 2.907 2.25 3.48a2.25 2.25 0 012.25 2.25c0 1.278-.857 2.366-2.25 2.948v.281l2.25-.281v.177c0 1.587-.875 2.907-2.25 3.48a2.25 2.25 0 01-2.25 2.25c0 1.278.857 2.366 2.25 2.948v.281l2.25-.281v.177c0 1.587-.875 2.907-2.25 3.48a2.25 2.25 0 01-2.25 2.25z"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Cutting-Edge Technology</h4>
+                    </div>
+                    <p class="text-gray-600">We leverage the latest big data technologies and methodologies to deliver innovative solutions.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 4.036 4 8 4s8-1.79 8-4V7M4 7c0 2.21 4.036 4 8 4s8-1.79 8-4M4 7c0-2.21 4.036-4 8-4s8 1.79 8 4m0 5c0 2.21-4.036 4-8 4s-8-1.79-8-4"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Data Security</h4>
+                    </div>
+                    <p class="text-gray-600">We prioritize the security and privacy of your data, implementing robust security measures.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up" data-animate-delay="100">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Actionable Insights</h4>
+                    </div>
+                    <p class="text-gray-600">We deliver insights that are not only informative but also actionable, driving real business results.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300" data-animate="fade-up" data-animate-delay="200">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                        <h4 class="text-lg font-semibold text-gray-700">Clear Communication</h4>
+                    </div>
+                    <p class="text-gray-600">We communicate clearly and transparently throughout the entire project lifecycle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16" data-animate="fade-in">
+      <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-4">
+        Our Data Analytics Services
+      </h2>
+      <p class="text-gray-600 text-lg">
+        Empowering your business with actionable insights from your data.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-left">
+        <img src="https://pixabay.com/get/g6ce8d8c6a5191fc914c669fbf325e4c0dc4ee47c39e2703d179d4e0516eba6bd7c7a768616bba36a974ed4629846258a_640.jpg" alt="Data Visualization" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Data Visualization
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Transform raw data into compelling visuals that reveal hidden patterns and trends. Interactive dashboards and reports for informed decision-making.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="fade-in">
+        <img src="https://pixabay.com/get/g3a360657531b662148a82b82396e81682939c024196b0c011602bcb23d76b107031cdd6a9f94eec9118898ffd1e16cc29a523caa19fba52557d7f799fe5fe4c2_640.jpg" alt="Predictive Analytics" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Predictive Analytics
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Leverage machine learning algorithms to forecast future outcomes and optimize business strategies. Identify opportunities and mitigate risks with data-driven predictions.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-right">
+        <img src="https://pixabay.com/get/gb084197b6cea9a397c3a7978d96b4821b8abd556c864eb1c2f2ec4af2e21f7a4ecfd77bcd61413f612db8e69e2dc25063b85af1d5e20722dee455c4d67ad3f99_640.jpg" alt="Big Data Consulting" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Big Data Consulting
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Expert guidance on building and managing your big data infrastructure. From data strategy to implementation, we help you harness the power of large datasets.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-left">
+        <img src="https://pixabay.com/get/gc6b90de5dff0e2990f221c918feb57e2c30d2dcfdd9d99396e95076364bba565167950c7bcfeece9a5bc73bca8924b7a12efa26738635ae209af91ae3130f159_640.jpg" alt="Data Mining" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Data Mining
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Uncover hidden patterns and valuable insights from your data through advanced data mining techniques. Improve decision-making and gain a competitive edge.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="fade-in">
+        <img src="https://images.unsplash.com/photo-1519389950473-47a04789385a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80" alt="Machine Learning" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Machine Learning Solutions
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Develop custom machine learning models tailored to your specific business needs. Automate tasks, improve accuracy, and unlock new opportunities with AI.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300" data-animate="slide-in-right">
+        <img src="https://images.unsplash.com/photo-1587620962725-ead3763e22e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80" alt="Custom Analytics Solutions" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">
+            Custom Analytics Solutions
+          </h3>
+          <p class="text-gray-600 mb-4">
+            We work with you to develop tailor-made analytics solutions that address your unique challenges and goals. Get the insights you need to drive growth and innovation.
+          </p>
+          <a href="#" class="inline-flex items-center py-2 px-4 text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            Learn More
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section id="features" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl lg:text-5xl font-bold text-gray-800 mb-4" data-animate="fade-in">
+                Unlocking the Power of Your Data
+            </h2>
+            <p class="text-gray-600 text-lg lg:text-xl" data-animate="fade-in" data-animate-delay="200">
+                Data Depot provides cutting-edge solutions to transform your raw data into actionable insights.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-left">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Advanced Analytics</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Leverage our advanced analytics platform to uncover hidden patterns, predict future trends, and optimize your business strategies. We use machine learning, statistical modeling, and data mining techniques to deliver unparalleled insights.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="fade-in" data-animate-delay="200">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 6 7.105F6 5 253v13m0-13C13.168 5.477 14.754 5 17 7.105M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Data Integration</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Seamlessly integrate data from diverse sources, including databases, cloud platforms, and third-party APIs. Our robust integration tools ensure data quality, consistency, and accessibility across your organization.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-right">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Real-time Dashboards</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Monitor your key performance indicators (KPIs) with interactive, real-time dashboards. Our customizable dashboards provide a clear and concise view of your data, enabling you to make informed decisions quickly.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-left" data-animate-delay="400">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Predictive Modeling</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Harness the power of predictive modeling to forecast future outcomes and mitigate risks. Our advanced algorithms analyze historical data to identify trends and predict future events with high accuracy.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="fade-in" data-animate-delay="400">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Data Visualization</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Transform complex data into visually compelling stories with our interactive data visualization tools. We help you communicate your insights effectively and engage your audience with clear and concise visuals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden" data-animate="slide-in-right" data-animate-delay="400">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800">Data Security</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Protect your sensitive data with our robust security measures. We employ industry-leading security protocols and encryption techniques to ensure the confidentiality, integrity, and availability of your data.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section id="testimonials" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-gray-800 text-center mb-8 data-animate" data-animate="fade-in-up">
+      What Our Clients Say
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Testimonial 1 -->
+      <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-left">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Sarah Johnson</h3>
+            <p class="text-sm text-gray-500">CEO, Tech Solutions Inc.</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Data Depot's analytics platform transformed our business. We gained invaluable insights into customer behavior,
+          leading to a 30% increase in sales within the first quarter. Their team is responsive, knowledgeable, and truly
+          dedicated to our success."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-up">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">David Lee</h3>
+            <p class="text-sm text-gray-500">Marketing Director, Global Enterprises</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "The predictive analytics provided by Data Depot helped us optimize our marketing campaigns with incredible accuracy.
+          We reduced our ad spend by 20% while simultaneously increasing lead generation. Their expertise in big data is
+          unmatched."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-right">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Maria Rodriguez</h3>
+            <p class="text-sm text-gray-500">Data Scientist, Innovation Labs</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "As a data scientist myself, I was impressed by the sophistication and depth of Data Depot's analytical tools.
+          Their platform is incredibly user-friendly, yet powerful enough to handle complex datasets. I highly recommend
+          their services to any organization looking to unlock the value of their data."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+       <!-- Testimonial 4 -->
+       <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-left">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Robert Williams</h3>
+            <p class="text-sm text-gray-500">CFO, Financial Growth Group</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Data Depot provided the financial analysis needed to optimize our investment strategies. Their insights into market trends and risk assessment were crucial in achieving our financial goals. We consider them a trusted partner."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-up">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Emily Chen</h3>
+            <p class="text-sm text-gray-500">Head of Research, BioScience Innovations</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "The data visualization tools offered by Data Depot significantly improved our research process. We were able to identify patterns and correlations in our data that were previously hidden. This has accelerated our research and development efforts."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 6 -->
+      <div class="bg-white rounded-lg shadow-md p-6 data-animate" data-animate="fade-in-right">
+        <div class="flex items-center mb-4">
+          <img src="/api/placeholder/60/60" alt="Client Avatar" class="rounded-full w-12 h-12 mr-4">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-700">Kevin O'Connell</h3>
+            <p class="text-sm text-gray-500">Operations Manager, Logistics Solutions</p>
+          </div>
+        </div>
+        <p class="text-gray-600 italic">
+          "Data Depot's real-time analytics platform helped us optimize our logistics operations. We reduced delivery times by 15% and improved overall efficiency. Their support team is always available to assist with any questions."
+        </p>
+        <div class="mt-4 text-yellow-500">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="bg-gray-100 py-16 px-6 md:px-12 lg:px-24 w-full overflow-hidden" data-animate="fade-in">
+    <div class="container mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-blue-900 sm:text-4xl" data-animate="slide-in-down">
+                Contact Data Depot
+            </h2>
+            <p class="mt-4 text-gray-600 leading-relaxed" data-animate="slide-in-up">
+                We're here to help you unlock the power of your data. Get in touch with our experts to discuss your
+                big data analytics needs.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8" data-animate="slide-in-left">
+                <h3 class="text-xl font-semibold text-blue-700 mb-4">Send us a Message</h3>
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name"
+                               class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                               placeholder="Your Name">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                               class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                               placeholder="Your Email">
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone"
+                               class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                               placeholder="Your Phone Number">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                                  class="shadow appearance-none border rounded-xl w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                  placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="bg-white rounded-xl shadow-lg p-8" data-animate="slide-in-right">
+                <h3 class="text-xl font-semibold text-blue-700 mb-4">Contact Information</h3>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Address:</p>
+                    <p class="text-gray-600">
+                        123 Data Drive<br>
+                        Silicon Valley, CA 94043
+                    </p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Phone:</p>
+                    <p class="text-gray-600">
+                        (555) 123-4567
+                    </p>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700 font-bold">Email:</p>
+                    <p class="text-gray-600">
+                        info@datadepot.com
+                    </p>
+                </div>
+                <div>
+                    <p class="text-gray-700 font-bold">Business Hours:</p>
+                    <p class="text-gray-600">
+                        Monday - Friday: 9:00 AM to 5:00 PM
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="bg-gray-800 text-white py-12 mt-24">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Data Depot</h3>
+                <p class="text-gray-300">
+                    Empowering businesses with data-driven insights. Unlock the potential of your data with our comprehensive analytics solutions.
+                </p>
+                <div class="flex mt-4 space-x-4">
+                    <a href="#" class="hover:text-orange-500" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    <a href="#" class="hover:text-orange-500" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="hover:text-orange-500" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Services</h3>
+                <ul class="text-gray-300">
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Data Warehousing</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Business Intelligence</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Predictive Analytics</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Data Visualization</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Machine Learning Solutions</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                <ul class="text-gray-300">
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">About Us</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Case Studies</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Pricing</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Blog</a></li>
+                    <li class="mb-2"><a href="#" class="hover:text-orange-500">Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                <p class="text-gray-300 mb-2">123 Data Drive, Suite 200</p>
+                <p class="text-gray-300 mb-2">Silicon Valley, CA 94043</p>
+                <p class="text-gray-300 mb-2">Email: <a href="mailto:info@datadepot.com" class="hover:text-orange-500">info@datadepot.com</a></p>
+                <p class="text-gray-300">Phone: <a href="tel:+15551234567" class="hover:text-orange-500">+1 (555) 123-4567</a></p>
+            </div>
+
+        </div>
+
+        <div class="mt-12 border-t border-gray-700 pt-8 text-center">
+            <p class="text-gray-400">
+                &copy; 2023 Data Depot. All rights reserved.
+            </p>
+            <p class="text-gray-400 mt-2">
+                <a href="#" class="hover:text-orange-500">Privacy Policy</a> | <a href="#" class="hover:text-orange-500">Terms of Service</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            // Animation system
+            const observer=new IntersectionObserver(entries=>{
+                entries.forEach((entry,i)=>{
+                    if(entry.isIntersecting){
+                        setTimeout(()=>{
+                            entry.target.classList.add('visible');
+                            // Handle staggered children if using that animation style
+                            if(entry.target.getAttribute('data-animate')==='stagger'){
+                                Array.from(entry.target.children).forEach((child,childIndex)=>{
+                                    child.style.setProperty('--child-index',childIndex);
+                                });
+                            }
+                        },i*100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },{threshold:0.15,rootMargin:'0px 0px -100px 0px'});
+            
+            document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
+            
+            // Fixed navigation
+            const nav=document.querySelector('nav');
+            if(nav){
+                const handleScroll=()=>{
+                    nav.classList[window.scrollY>100?'add':'remove']('nav-fixed');
+                };
+                window.addEventListener('scroll',handleScroll,{passive:true});
+                handleScroll();
+            }
+            
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+                anchor.addEventListener('click',function(e){
+                    e.preventDefault();
+                    const targetId=this.getAttribute('href');
+                    if(targetId==='#')return;
+                    const target=document.querySelector(targetId);
+                    if(target){
+                        const targetPosition=target.getBoundingClientRect().top+window.pageYOffset-(nav?nav.offsetHeight:0)-20;
+                        window.scrollTo({top:targetPosition,behavior:'smooth'});
+                    }
+                });
+            });
+            
+            // Scroll progress indicator
+            const height=Math.max(
+                document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight
+            )-window.innerHeight;
+            
+            window.addEventListener('scroll',()=>{
+                document.documentElement.style.setProperty('--scroll-progress',(window.scrollY/height*100)+'%');
+            },{passive:true});
+            
+            // Mobile menu
+            const menuToggle=document.getElementById('mobile-menu-toggle');
+            const mobileMenu=document.getElementById('mobile-menu');
+            if(menuToggle&&mobileMenu){
+                menuToggle.addEventListener('click',()=>{
+                    mobileMenu.classList.toggle('hidden');
+                    document.body.classList.toggle('overflow-hidden');
+                });
+                document.addEventListener('click',e=>{
+                    if(mobileMenu&&!mobileMenu.classList.contains('hidden')&&
+                        menuToggle&&!menuToggle.contains(e.target)&&!mobileMenu.contains(e.target)){
+                        mobileMenu.classList.add('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                });
+            }
+            
+            // Accordions
+            document.querySelectorAll('[data-accordion-target]').forEach(btn=>{
+                btn.addEventListener('click',()=>{
+                    const target=document.querySelector(btn.getAttribute('data-accordion-target'));
+                    if(target){
+                        const isExpanded=btn.getAttribute('aria-expanded')==='true';
+                        target.classList.toggle('hidden');
+                        btn.setAttribute('aria-expanded',isExpanded?'false':'true');
+                        const icon=btn.querySelector('.accordion-icon');
+                        if(icon)icon.classList.toggle('rotate-180');
+                    }
+                });
+            });
+            
+            // Form validation (optional enhancement)
+            document.querySelectorAll('form').forEach(form=>{
+                form.addEventListener('submit',function(e){
+                    let valid=true;
+                    const requiredFields=form.querySelectorAll('[required]');
+                    
+                    requiredFields.forEach(field=>{
+                        if(!field.value.trim()){
+                            valid=false;
+                            field.classList.add('border-red-500');
+                            
+                            // Add error message if not already present
+                            let errorMsg=field.parentNode.querySelector('.error-message');
+                            if(!errorMsg){
+                                errorMsg=document.createElement('p');
+                                errorMsg.className='text-red-500 text-sm mt-1 error-message';
+                                errorMsg.textContent='This field is required';
+                                field.parentNode.appendChild(errorMsg);
+                            }
+                        }else{
+                            field.classList.remove('border-red-500');
+                            const errorMsg=field.parentNode.querySelector('.error-message');
+                            if(errorMsg)errorMsg.remove();
+                        }
+                    });
+                    
+                    if(!valid){
+                        e.preventDefault();
+                    }
+                });
+            });
+            
+            // Tabs functionality if present
+            document.querySelectorAll('[data-tabs]').forEach(tabGroup=>{
+                const tabs=tabGroup.querySelectorAll('[data-tab]');
+                const tabContents=document.querySelectorAll('[data-tab-content]');
+                
+                tabs.forEach(tab=>{
+                    tab.addEventListener('click',()=>{
+                        const target=tab.getAttribute('data-tab');
+                        
+                        // Update active tab state
+                        tabs.forEach(t=>t.classList.remove('active-tab','text-primary-600','border-primary-600'));
+                        tab.classList.add('active-tab','text-primary-600','border-primary-600');
+                        
+                        // Show correct content
+                        tabContents.forEach(content=>{
+                            if(content.getAttribute('data-tab-content')===target){
+                                content.classList.remove('hidden');
+                            }else{
+                                content.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            });
+            
+            // Carousels
+            document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+                const slides=carousel.querySelectorAll('[data-slide]');
+                const prevBtn=carousel.querySelector('[data-carousel-prev]');
+                const nextBtn=carousel.querySelector('[data-carousel-next]');
+                
+                if(slides.length>0&&prevBtn&&nextBtn){
+                    let current=0,interval=null;
+                    
+                    slides[0].classList.remove('hidden');
+                    
+                    const updateIndicators=()=>{
+                        carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                            ind.classList[i===current?'add':'remove']('bg-primary-600');
+                            ind.classList[i!==current?'add':'remove']('bg-gray-300');
+                        });
+                    };
+                    
+                    const showSlide=idx=>{
+                        slides.forEach(s=>s.classList.add('hidden'));
+                        slides[idx].classList.remove('hidden');
+                        updateIndicators();
+                    };
+                    
+                    nextBtn.addEventListener('click',()=>{
+                        current=(current+1)%slides.length;
+                        showSlide(current);
+                    });
+                    
+                    prevBtn.addEventListener('click',()=>{
+                        current=(current-1+slides.length)%slides.length;
+                        showSlide(current);
+                    });
+                    
+                    updateIndicators();
+                    
+                    const startAuto=()=>{
+                        if(carousel.hasAttribute('data-auto')&&!interval){
+                            interval=setInterval(()=>{
+                                current=(current+1)%slides.length;
+                                showSlide(current);
+                            },5000);
+                        }
+                    };
+                    
+                    carousel.addEventListener('mouseenter',()=>{
+                        if(interval){clearInterval(interval);interval=null;}
+                    });
+                    
+                    carousel.addEventListener('mouseleave',startAuto);
+                    
+                    carousel.querySelectorAll('[data-indicator]').forEach((ind,i)=>{
+                        ind.addEventListener('click',()=>{
+                            current=i;
+                            showSlide(current);
+                        });
+                    });
+                    
+                    startAuto();
+                }
+            });
+            
+            // Initialize counters for stats sections if they exist
+            document.querySelectorAll('[data-counter]').forEach(counter=>{
+                const target=parseInt(counter.getAttribute('data-counter')||'0',10);
+                const duration=1500; // Animation duration in ms
+                const step=Math.ceil(target/50); // How much to increment per step
+                let current=0;
+                
+                const updateCounter=()=>{
+                    current+=step;
+                    if(current>target)current=target;
+                    
+                    counter.textContent=current.toString().replace(/B(?=(d{3})+(?!d))/g,',');
+                    
+                    if(current<target){
+                        requestAnimationFrame(updateCounter);
+                    }
+                };
+                
+                // Start counting when element is in view
+                const observer=new IntersectionObserver(entries=>{
+                    entries.forEach(entry=>{
+                        if(entry.isIntersecting){
+                            updateCounter();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },{threshold:0.5});
+                
+                observer.observe(counter);
+            });
+        });
+    </script>
+</body>
+</html>
